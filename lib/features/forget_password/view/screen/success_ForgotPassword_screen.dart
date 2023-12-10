@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:job_finder_app/core/router/app_route.dart';
 import 'package:job_finder_app/core/styel/color.dart';
 import 'package:job_finder_app/core/widget/customElvatedButton.dart';
 import 'package:job_finder_app/core/widget/home_indicator.dart';
@@ -53,7 +54,9 @@ class SuccessForgotPasswordScreen extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            CustomElevatedButton(() {}, "Open email app"),
+            CustomElevatedButton(() {
+              Navigator.pushNamed(context, AppRoute.loginScreen);
+            }, "Login"),
           ],
         ),
       ),

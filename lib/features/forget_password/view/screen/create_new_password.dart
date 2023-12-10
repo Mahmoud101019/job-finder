@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:job_finder_app/core/router/app_route.dart';
 import 'package:job_finder_app/core/styel/color.dart';
 import 'package:job_finder_app/core/widget/TextFormField.dart';
 import 'package:job_finder_app/core/widget/customElvatedButton.dart';
@@ -185,6 +186,8 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                   child: CustomElevatedButton(() {
                     if (formKey.currentState!.validate()) {
                       print("Password Has Been Change");
+                      Navigator.pushNamed(
+                          context, AppRoute.successForgetPasswordScreen);
                     }
                   }, "Reset password"),
                 )

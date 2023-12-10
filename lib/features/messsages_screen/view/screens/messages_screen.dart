@@ -25,7 +25,6 @@ class MessagesScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              //mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Expanded(
                   child: CustomSearchBar(

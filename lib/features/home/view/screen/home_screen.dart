@@ -16,8 +16,6 @@ import 'package:job_finder_app/features/profile/view_model/profile_cubit.dart';
 
 import 'package:sizer/sizer.dart';
 
-
-
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -48,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               BlocBuilder<ProfileCubit, ProfileState>(
                 builder: (context, state) {
-                  if(profileCubit.profile.isNotEmpty){
+                  if (profileCubit.profile.isNotEmpty) {
                     return Text(
                       '${profileCubit.profile[0].name}👋',
                       style: TextStyle(
@@ -56,20 +54,19 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 20.sp,
                         fontFamily: 'SFProDisplay',
                         fontWeight: FontWeight.w500,
-
                       ),
                     );
-                  }
-                  else{
+                  } else {
                     return ShimmerContainerEffect(
                       height: 1.2.h,
                       width: MediaQuery.of(context).size.width / 2.5,
                     );
                   }
-
                 },
               ),
-              SizedBox(height: 0.8.h,),
+              SizedBox(
+                height: 0.8.h,
+              ),
               Text(
                 'Create a better future for yourself here',
                 style: TextStyle(
@@ -77,22 +74,20 @@ class _HomeScreenState extends State<HomeScreen> {
                   fontSize: 11.5.sp,
                   fontFamily: 'SFProDisplay',
                   fontWeight: FontWeight.w500,
-
                 ),
               ),
-              SizedBox(height: 0.8.h,),
-
+              SizedBox(
+                height: 0.8.h,
+              ),
             ],
           ),
         ),
         actions: [
-
           Padding(
             padding: const EdgeInsets.fromLTRB(0, 0, 24, 0),
             child: Container(
                 width: 48,
                 height: 48,
-                //  padding: const EdgeInsets.all(12),
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
                     side: const BorderSide(color: AppTheme.neutral3),
@@ -100,20 +95,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 child: Center(
-                  child: IconButton(onPressed: () {
-
-                    Navigator.pushNamed(context, AppRoute.notificationScreen);
-                  },
-                      icon: const Icon(Iconsax.notification)
-                  ),
-                )
-            ),
+                  child: IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, AppRoute.notificationScreen);
+                      },
+                      icon: const Icon(Iconsax.notification)),
+                )),
           ),
-
-
         ],
-
-
       ),
       body: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -125,13 +115,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   onTap: () {
                     Navigator.pushNamed(context, AppRoute.searchScreen);
                   },
-                  controller: searchController, hintText: "Search...."),
-              SizedBox(height: 2.h,),
-              const JobStatusItem(title: 'Twitter',
+                  controller: searchController,
+                  hintText: "Search...."),
+              SizedBox(
+                height: 2.h,
+              ),
+              const JobStatusItem(
+                title: 'Twitter',
                 subTitle: 'Waiting to be selected by the twitter team',
-                isAccepted: true,),
-              SizedBox(height: 2.h,),
-
+                isAccepted: true,
+              ),
+              SizedBox(
+                height: 2.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -142,46 +138,42 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 15.sp,
                       fontFamily: 'SFProDisplay',
                       fontWeight: FontWeight.w500,
-
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: Text(
-                    'View all',
-                    style: TextStyle(
-                      color: AppTheme.primary5,
-                      fontSize: 11.5.sp,
-                      fontFamily: 'SFProDisplay',
-                      fontWeight: FontWeight.w500,
-
-                    ),
-                  )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View all',
+                        style: TextStyle(
+                          color: AppTheme.primary5,
+                          fontSize: 11.5.sp,
+                          fontFamily: 'SFProDisplay',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )),
                 ],
               ),
               BlocBuilder<HomeCubit, HomeState>(
                 builder: (context, state) {
                   return BuildCondition(
                     condition: cubit.recentJobsData.isNotEmpty,
-                    builder: (context) =>
-                        SizedBox(
-                          height: 200,
-                          child: ListView.separated(
-                              scrollDirection: Axis.horizontal,
-                              shrinkWrap: true,
-                              itemBuilder: (context, index) =>
-                                  SuggestedJobItem(
-                                    jobData: cubit.suggestJobsData[index],),
-                              separatorBuilder: (context, index) =>
-                                  SizedBox(width: 4.w,),
-                              itemCount: cubit.suggestJobsData.length),
-                        ),
-
-                    fallback: (context) =>
-                    const ShimmerSuggestedJob(),
+                    builder: (context) => SizedBox(
+                      height: 200,
+                      child: ListView.separated(
+                          scrollDirection: Axis.horizontal,
+                          shrinkWrap: true,
+                          itemBuilder: (context, index) => SuggestedJobItem(
+                                jobData: cubit.suggestJobsData[index],
+                              ),
+                          separatorBuilder: (context, index) => SizedBox(
+                                width: 4.w,
+                              ),
+                          itemCount: cubit.suggestJobsData.length),
+                    ),
+                    fallback: (context) => const ShimmerSuggestedJob(),
                   );
                 },
               ),
-
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -192,44 +184,37 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontSize: 15.sp,
                       fontFamily: 'SFProDisplay',
                       fontWeight: FontWeight.w500,
-
                     ),
                   ),
-                  TextButton(onPressed: () {}, child: Text(
-                    'View all',
-                    style: TextStyle(
-                      color: AppTheme.primary5,
-                      fontSize: 11.5.sp,
-                      fontFamily: 'SFProDisplay',
-                      fontWeight: FontWeight.w500,
-
-                    ),
-                  )),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'View all',
+                        style: TextStyle(
+                          color: AppTheme.primary5,
+                          fontSize: 11.5.sp,
+                          fontFamily: 'SFProDisplay',
+                          fontWeight: FontWeight.w500,
+                        ),
+                      )),
                 ],
               ),
               BlocBuilder<HomeCubit, HomeState>(
                 builder: (context, state) {
                   return BuildCondition(
                     condition: cubit.recentJobsData.isNotEmpty,
-                    builder: (context) =>
-                        ListView.separated(
-                            physics: const NeverScrollableScrollPhysics(),
-                            shrinkWrap: true,
-                            itemBuilder: (context, index) =>
-                                RecentJobItem(
-                                  jobData: cubit.recentJobsData[index],
-                                ),
-                            separatorBuilder: (context,
-                                index) => const Divider(),
-                            itemCount: cubit.recentJobsData.length),
-
-                    fallback: (context) =>
-                    const ShimmerRecentlyListView(),
+                    builder: (context) => ListView.separated(
+                        physics: const NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) => RecentJobItem(
+                              jobData: cubit.recentJobsData[index],
+                            ),
+                        separatorBuilder: (context, index) => const Divider(),
+                        itemCount: cubit.recentJobsData.length),
+                    fallback: (context) => const ShimmerRecentlyListView(),
                   );
                 },
               ),
-
-
             ],
           ),
         ),
