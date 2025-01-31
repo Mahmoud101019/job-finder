@@ -51,7 +51,7 @@ dependencies:
   email_validator: ^2.1.17
   buildcondition: ^0.0.4
   file_picker: ^6.0.0
-  syncfusion_flutter_pdfviewer: ^23.1.43
+  syncfusion_flutter_pdfviewer: ^24.2.8
   photo_view: ^0.14.0
   share_plus: ^7.2.1
   http: ^1.1.0

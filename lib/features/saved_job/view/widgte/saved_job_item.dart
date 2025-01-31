@@ -72,7 +72,7 @@ class _SavedJobItemState extends State<SavedJobItem> {
           ),
           trailing: IconButton(
             onPressed: () {
-              Scaffold.of(context).showBottomSheet<void>(
+              Scaffold.of(context).showBottomSheet(
                 (BuildContext context) =>
                     SlideTransitionAnimation(duration: const Duration(seconds:1), begin:  const Offset(0, 0.2), end: Offset.zero,
                       child:   CustomBottomSheet(

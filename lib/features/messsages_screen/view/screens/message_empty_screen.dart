@@ -38,7 +38,7 @@ class MessageEmptyScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    Scaffold.of(context).showBottomSheet<void>(
+                    Scaffold.of(context).showBottomSheet(
                       (BuildContext context) => const CustomBottomSheet(
                         items: [
                           BottomSheetItem(

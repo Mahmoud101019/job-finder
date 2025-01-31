@@ -32,15 +32,22 @@ class _EditDetalisScreenState extends State<EditDetalisScreen> {
   late ProfileCubit cubit;
 
   @override
-  void initState() {
-    super.initState();
-    cubit = ProfileCubit.get(context);
-    nameController.text = cubit.profile[0].name!;
+void initState() {
+  super.initState();
+  cubit = ProfileCubit.get(context);
+
+  if (cubit.profile.isNotEmpty) {
+    nameController.text = cubit.profile[0].name ?? '';
+  }
+
+  if (cubit.profileDetails.isNotEmpty) {
     bioController.text = cubit.profileDetails[0].bio ?? '';
     addressController.text = cubit.profileDetails[0].address ?? '';
     phoneController.text = cubit.profileDetails[0].mobile ?? '';
-    workController.text = cubit.profileDetails[0].interestedWork ?? "";
+    workController.text = cubit.profileDetails[0].interestedWork ?? '';
   }
+}
+
 
   @override
   Widget build(BuildContext context) {

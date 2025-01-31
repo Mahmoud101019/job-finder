@@ -104,8 +104,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           controller: oldPasswordController,
                           hintText: "Old Password",
                           prefixIcon: const Icon(Iconsax.lock),
-                          prefixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          prefixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral3),
                           suffixIcon: IconButton(
@@ -116,8 +116,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                                 ? const Icon(Iconsax.eye_slash)
                                 : const Icon(Iconsax.eye),
                           ),
-                          suffixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          suffixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral4),
                           keyboardType: TextInputType.visiblePassword,
@@ -164,8 +164,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           controller: newPasswordController,
                           hintText: "new Password",
                           prefixIcon: const Icon(Iconsax.lock),
-                          prefixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          prefixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral3),
                           suffixIcon: IconButton(
@@ -176,8 +176,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                                 ? const Icon(Iconsax.eye_slash)
                                 : const Icon(Iconsax.eye),
                           ),
-                          suffixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          suffixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral4),
                           keyboardType: TextInputType.visiblePassword,
@@ -220,8 +220,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                           controller: confirmNewPasswordController,
                           hintText: "Confirm Password",
                           prefixIcon: const Icon(Iconsax.lock),
-                          prefixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          prefixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral3),
                           suffixIcon: IconButton(
@@ -232,8 +232,8 @@ class _ChangePasswordScreenState extends State<ChangePasswordScreen> {
                                 ? const Icon(Iconsax.eye_slash)
                                 : const Icon(Iconsax.eye),
                           ),
-                          suffixIconColor: MaterialStateColor.resolveWith(
-                              (states) => states.contains(MaterialState.focused)
+                          suffixIconColor: WidgetStateColor.resolveWith(
+                              (states) => states.contains(WidgetState.focused)
                                   ? AppTheme.neutral9
                                   : AppTheme.neutral4),
                           keyboardType: TextInputType.visiblePassword,

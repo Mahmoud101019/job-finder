@@ -111,9 +111,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                             errorText: cubit.errorText2,
                             controller: passwordController,
                             prefixIcon: const Icon(Iconsax.lock),
-                            prefixIconColor: MaterialStateColor.resolveWith(
+                            prefixIconColor: WidgetStateColor.resolveWith(
                                 (states) =>
-                                    states.contains(MaterialState.focused)
+                                    states.contains(WidgetState.focused)
                                         ? AppTheme.neutral9
                                         : AppTheme.neutral3),
                             hintText: "Enter your new password",
@@ -125,9 +125,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                   ? const Icon(Iconsax.eye_slash)
                                   : const Icon(Iconsax.eye),
                             ),
-                            suffixIconColor: MaterialStateColor.resolveWith(
+                            suffixIconColor: WidgetStateColor.resolveWith(
                                 (states) =>
-                                    states.contains(MaterialState.focused)
+                                    states.contains(WidgetState.focused)
                                         ? AppTheme.neutral9
                                         : AppTheme.neutral3),
                             obscureText: cubit.obscure),
@@ -154,9 +154,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                             errorText: cubit.errorText,
                             controller: passwordCheckController,
                             prefixIcon: const Icon(Iconsax.lock),
-                            prefixIconColor: MaterialStateColor.resolveWith(
+                            prefixIconColor: WidgetStateColor.resolveWith(
                                 (states) =>
-                                    states.contains(MaterialState.focused)
+                                    states.contains(WidgetState.focused)
                                         ? AppTheme.neutral9
                                         : AppTheme.neutral3),
                             hintText: "Enter your new password",
@@ -168,9 +168,9 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                                   ? const Icon(Iconsax.eye_slash)
                                   : const Icon(Iconsax.eye),
                             ),
-                            suffixIconColor: MaterialStateColor.resolveWith(
+                            suffixIconColor: WidgetStateColor.resolveWith(
                                 (states) =>
-                                    states.contains(MaterialState.focused)
+                                    states.contains(WidgetState.focused)
                                         ? AppTheme.neutral9
                                         : AppTheme.neutral3),
                             obscureText: cubit.obscure),

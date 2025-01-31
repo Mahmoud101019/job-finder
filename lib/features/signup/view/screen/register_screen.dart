@@ -111,8 +111,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     hintText: "Username",
                     keyboardType: TextInputType.name,
                     prefixIcon: const Icon(Iconsax.user),
-                    prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                        states.contains(MaterialState.focused)
+                    prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                        states.contains(WidgetState.focused)
                             ? AppTheme.neutral9
                             : AppTheme.neutral3),
                     obscureText: false,
@@ -136,8 +136,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                     keyboardType: TextInputType.emailAddress,
                     prefixIcon: const Icon(Iconsax.sms),
-                    prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                        states.contains(MaterialState.focused)
+                    prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                        states.contains(WidgetState.focused)
                             ? AppTheme.neutral9
                             : AppTheme.neutral3),
                     obscureText: false,
@@ -170,8 +170,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         controller: passwordController,
                         hintText: "Password",
                         prefixIcon: const Icon(Iconsax.lock),
-                        prefixIconColor: MaterialStateColor.resolveWith(
-                            (states) => states.contains(MaterialState.focused)
+                        prefixIconColor: WidgetStateColor.resolveWith(
+                            (states) => states.contains(WidgetState.focused)
                                 ? AppTheme.neutral9
                                 : AppTheme.neutral3),
                         suffixIcon: IconButton(
@@ -182,8 +182,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ? const Icon(Iconsax.eye_slash)
                               : const Icon(Iconsax.eye),
                         ),
-                        suffixIconColor: MaterialStateColor.resolveWith(
-                            (states) => states.contains(MaterialState.focused)
+                        suffixIconColor: WidgetStateColor.resolveWith(
+                            (states) => states.contains(WidgetState.focused)
                                 ? AppTheme.neutral9
                                 : AppTheme.neutral4),
                         keyboardType: TextInputType.number,

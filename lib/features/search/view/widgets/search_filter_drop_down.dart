@@ -17,7 +17,7 @@ class FilterDropDownOption extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Scaffold.of(context)
-              .showBottomSheet<void>((BuildContext context) => Container(
+              .showBottomSheet((BuildContext context) => Container(
                     height: MediaQuery.of(context).size.height * 0.30,
                     padding: const EdgeInsets.symmetric(
                       horizontal: 24,

@@ -39,7 +39,7 @@ class _SearchScreenResultState extends State<SearchScreenResult> {
                 return IconButton(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     onPressed: () {
-                      Scaffold.of(ctx).showBottomSheet<void>(
+                      Scaffold.of(ctx).showBottomSheet(
                         (BuildContext context) =>const FilterBody(),
                       );
                     },

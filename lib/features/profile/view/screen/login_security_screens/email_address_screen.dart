@@ -41,8 +41,8 @@ class EmailAddressScreen extends StatelessWidget {
                 CustomTextFormField(
                   controller: emailController,
                   prefixIcon: const Icon(Iconsax.sms),
-                  prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                      states.contains(MaterialState.focused)
+                  prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                      states.contains(WidgetState.focused)
                           ? AppTheme.neutral9
                           : AppTheme.neutral3),
                   hintText: 'Email address',

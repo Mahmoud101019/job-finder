@@ -79,8 +79,8 @@ class BioDataScreen extends StatelessWidget {
               hintText: "Username",
               keyboardType: TextInputType.name,
               prefixIcon: const Icon(Iconsax.user),
-              prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
+              prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                  states.contains(WidgetState.focused)
                       ? AppTheme.neutral9
                       : AppTheme.neutral3),
               obscureText: false,
@@ -130,8 +130,8 @@ class BioDataScreen extends StatelessWidget {
               hintText: "Email",
               keyboardType: TextInputType.emailAddress,
               prefixIcon: const Icon(Iconsax.sms),
-              prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
+              prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                  states.contains(WidgetState.focused)
                       ? AppTheme.neutral9
                       : AppTheme.neutral3),
               obscureText: false,

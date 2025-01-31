@@ -42,8 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           IconButton(
             onPressed: () {
               CashHelper.removeCacheKey(key: MySharedKeys.token).then((value) {
-                // cubit.close();
-                //  HomeCubit.get(context).close();
+                if (!context.mounted) return null;
                 Navigator.pushNamedAndRemoveUntil(
                     context, AppRoute.loginScreen, (route) => false);
                 showSuccessSnackBar(

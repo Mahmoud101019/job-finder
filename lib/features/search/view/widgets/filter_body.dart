@@ -108,9 +108,9 @@ class _FilterBodyState extends State<FilterBody> {
                     prefixIcon:
                     const Icon(Iconsax.location),
                     prefixIconColor:
-                    MaterialStateColor.resolveWith(
+                    WidgetStateColor.resolveWith(
                             (states) => states.contains(
-                            MaterialState.focused)
+                            WidgetState.focused)
                             ? AppTheme.neutral9
                             : AppTheme.neutral3),
                     controller: locationController,

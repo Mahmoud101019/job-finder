@@ -72,16 +72,16 @@ class TwoStepVerification3 extends StatelessWidget {
               controller: passwordController,
               hintText: "Password",
               prefixIcon: const Icon(Iconsax.lock),
-              prefixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
+              prefixIconColor: WidgetStateColor.resolveWith((states) =>
+                  states.contains(WidgetState.focused)
                       ? AppTheme.neutral9
                       : AppTheme.neutral3),
               suffixIcon: IconButton(
                 onPressed: () {},
                 icon: const Icon(Iconsax.eye_slash),
               ),
-              suffixIconColor: MaterialStateColor.resolveWith((states) =>
-                  states.contains(MaterialState.focused)
+              suffixIconColor: WidgetStateColor.resolveWith((states) =>
+                  states.contains(WidgetState.focused)
                       ? AppTheme.neutral9
                       : AppTheme.neutral4),
               keyboardType: TextInputType.visiblePassword,
